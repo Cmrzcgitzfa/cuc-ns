@@ -128,18 +128,18 @@
 网络入侵检测系统是对通信数据进行侦听采集数据。提供对网络通用的保护，不消耗主机额外资源。
 
 无论是主机入侵检测系统，还是网络入侵检测系统，都可以采用的系统体系结构包括集中式结构、等级分布式结构以及完全分布式结构。详细介绍如下：
-集中式结构是采用分布式的信息收集，然后将收集信息汇总上报，进行集中关联分析的结构形式，具体结构如图 9-7 所示。典型的集中式结构代表有：DIDS（Distributed Intrusion Detection System）（Snapp et al., 1991）、DShield（Internet Storm Center，2000）、NSTAT（Kemmerer,1998）。集中式结构的挑战是单点故障和单点瓶颈。单点故障是指汇总关联分析节点一旦出现故障，则整个系统就会无法工作。单点瓶颈是指汇总关联分析节点的处理能力决定了整个系统的处理能力。因此，集中式结构的应用场景为小型公司网络范围内的IDS协作，不适用于互联网范围内的大规模IDS协作。
+集中式结构是采用分布式的信息收集，然后将收集信息汇总上报，进行集中关联分析的结构形式，具体结构如图 9-6 所示。典型的集中式结构代表有：DIDS（Distributed Intrusion Detection System）（Snapp et al., 1991）、DShield（Internet Storm Center，2000）、NSTAT（Kemmerer,1998）。集中式结构的挑战是单点故障和单点瓶颈。单点故障是指汇总关联分析节点一旦出现故障，则整个系统就会无法工作。单点瓶颈是指汇总关联分析节点的处理能力决定了整个系统的处理能力。因此，集中式结构的应用场景为小型公司网络范围内的IDS协作，不适用于互联网范围内的大规模IDS协作。
 
 ![图 9-6 集中式结构](attach/media/image7.png)
 
 分布式结构是指引擎和控制中心在2个系统之上，可通过网络通讯进行远距离查看和操作的结构形式，可细分为等级分布式和完全分布式。
 
-等级分布式结构的特点是存在分区和“逐层”汇聚式关联分析。分区可分为地理位置、管理域、相近软件平台以及预期入侵种类，具体结构如图 9-8 所示。等级分布式结构的典型代表是：GrIDS(Staniford-Chen et al., 1996)、The EMERALD project (Porras and Neumann, 1997)、DSOC (Distributed Security Operation Center, Abdoul Karim Ganame et al., 2008)、Servin and Kudenko (2008) 、reinforcement learning based、AAFID(Balasubramaniyan et al., 1998)、NetSTAT (Vigna, 1999)。等级分布式结构的优点是可扩展性略高于集中式结构，挑战是整个系统的处理能力仍受到高层次节点能力的制约；高层节点引发的单点故障也仍可能存在；并且系统的检出率较低，信息在“汇聚”的过程中会由于“压缩”而导致“损失”和“失真”。
+等级分布式结构的特点是存在分区和“逐层”汇聚式关联分析。分区可分为地理位置、管理域、相近软件平台以及预期入侵种类，具体结构如图 9-7 所示。等级分布式结构的典型代表是：GrIDS(Staniford-Chen et al., 1996)、The EMERALD project (Porras and Neumann, 1997)、DSOC (Distributed Security Operation Center, Abdoul Karim Ganame et al., 2008)、Servin and Kudenko (2008) 、reinforcement learning based、AAFID(Balasubramaniyan et al., 1998)、NetSTAT (Vigna, 1999)。等级分布式结构的优点是可扩展性略高于集中式结构，挑战是整个系统的处理能力仍受到高层次节点能力的制约；高层节点引发的单点故障也仍可能存在；并且系统的检出率较低，信息在“汇聚”的过程中会由于“压缩”而导致“损失”和“失真”。
 
 ![图 9-7 等级分布式结构](attach/media/image8.png)
 
 
-完全分布式结构的特点是无超级管理节点，节点间通信方式为P2P、Gossip协议、组播或发布/订阅机制，具体结构如图9-9所示。典型代表有：Locasto et al. (2005): P2P based 、The DOMINO project (Yegneswaran et al., 2004; Barford and Jha, 2004)、Dash et al. (2006)、Garcia et al. (2004)、MADIDF (Mobile Agents based Distributed Intrusion Detection Framework) (Dayong Ye et al., 2008) 、Indra (Janakiraman and Zhang, 2003)、CSM (White et al., 1996)。完全分布式的挑战是检测精度低、可扩展性差、负载均衡难度高。
+完全分布式结构的特点是无超级管理节点，节点间通信方式为P2P、Gossip协议、组播或发布/订阅机制，具体结构如图9-8所示。典型代表有：Locasto et al. (2005): P2P based 、The DOMINO project (Yegneswaran et al., 2004; Barford and Jha, 2004)、Dash et al. (2006)、Garcia et al. (2004)、MADIDF (Mobile Agents based Distributed Intrusion Detection Framework) (Dayong Ye et al., 2008) 、Indra (Janakiraman and Zhang, 2003)、CSM (White et al., 1996)。完全分布式的挑战是检测精度低、可扩展性差、负载均衡难度高。
 
 ![图 9-8 完全分布式结构](attach/media/image9.png)
 
